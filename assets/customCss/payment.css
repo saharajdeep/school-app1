@@ -1,0 +1,66 @@
+body{
+    background-image:url("../pic/Soccer_picture.jpg");
+    background-size: cover;
+}
+.bg{
+padding: 40px;
+}
+.register{
+    margin-top: 3%;
+    height:100%;
+    width:100%;
+    opacity: 0.9;
+}
+
+.pay{
+    height: 50px;
+    width: 40px; 
+}
+.register-right{
+    background: #f8f9fa;
+    bottom:100%;
+    margin-left: 10%;
+}
+
+.btnRegister{
+    float: right;
+    margin-top: 30%;
+    margin-right: 5%;
+    border: none;
+    border-radius: 1.5rem;
+    background-color:rgba(233, 20, 20, 0.6);
+    padding: 2%;
+    width: 30%;
+    cursor: pointer;
+    font-family: verdana;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    color: #C00000;
+}

@@ -1,0 +1,56 @@
+<h5 style="display: none;">{{viewTitle}}</h5>
+
+<div class="register registerList">
+    <div class="row register-form">
+
+    <h2 class="col-md-4 text-danger text-uppercase">Registered List</h2>
+
+<div class="container">
+    <div class="row">
+        <h3 class="col-md-2">
+            First Name
+        </h3>
+        <h3 class="col-md">
+                Last Name
+        </h3>
+        <!-- <h3 class="col-md-4">
+            Id Proof
+    </h3> -->
+    </div>
+</div>
+<div class="container">
+<div class="row">
+ 
+        <!-- <div class="col-md">
+                {{#each teamName}}
+                <div class="nameDivider">{{this}}</div>
+                {{/each}}
+        </div> -->
+        <div class="col-md-2">
+            {{#each firstName}}
+            <div>{{this}}</div>
+            {{/each}}
+    </div>
+    <div class="col-md">
+            {{#each lastName}}
+            <div>{{this}}</div>
+            {{/each}}
+    </div>
+    <!-- <div class="col">
+            {{#each pic}}
+            <div>{{this}}</div>
+            {{/each}}
+    </div> -->
+    {{#each list}}
+    {{this.email}}
+    {{/each}}
+</div>
+</div>
+<!-- <div class="col-md-4 offset-8">
+<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Confirm</button>
+<button type="submit" id="submitTeamList" class="btn btn-info"><i class="fa fa-database"></i>Decline</button>
+</div> -->
+</div>
+</div>
+</div>
+   

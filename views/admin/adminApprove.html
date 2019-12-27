@@ -1,0 +1,135 @@
+<h7 style="display:none;">See News</h7>
+
+<div class="row">
+<form action="/admin" method="POST" class="newsForm" enctype="multipart/form-data">
+  <div class="register">   
+      <div class="col-md-8 adminNews">
+          <input type="hidden" name="_id" value="">
+                     
+                           <h1 class="text-danger text-center text-uppercase">Add News</h1>
+                          <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="row register-form">
+                                    
+                                        <div class="custom-file mb-3">
+                                       
+                                            <div class="col-sm-4">
+                                             <input type="file" name="file" id="file" required/>
+                                            </div>
+                                        </div>
+                                      <div class="col-sm-4">
+                                          <div class="form-group">
+                                              <input id="demo" name="date" value="" required/>
+                                           
+                                              <label for="exampleFormControlTextarea1">Description</label>
+                                              <textarea class="text-justify" name="description" id="exampleFormControlTextarea1" rows="6" cols="50" required></textarea>
+                                            </div>
+                                      </div>
+                                    
+                                       </div>
+     </div>
+</div>
+
+    <div class="form-group col-sm-4 offset-8">
+               <button type="submit" id="but" class="btn btn-info newsButton"><i class="fa fa-database"></i>Submit</button>
+                
+           
+           </div>
+          </div>
+  </div>
+</form>
+<br />
+
+
+    
+
+<!-- 
+<div class="col-md-4 schedules">
+
+    <div class="text-center text-uppercase font-weight-normal heading"><u>Stage Schedules</u><br>
+    </div>
+    {{#each matchList}}
+      <div class="list text-center">{{this.matchDay}}</div>
+      <div class="text-center">{{this.day}}</div>
+      {{/each}}
+    </div> -->
+
+  </div>
+ 
+<!-- <div class="col-md-4">
+  <div class="schedules">
+    <div class="row">
+      <input type="hidden" name="_id" value="">
+      <a href="/adminGallery" class="text-center text-uppercase font-weight-normal"><u>Add images</u><br>
+      </a>
+    </div>
+    <div class="row">
+        <input type="hidden" name="_id" value="">
+        <a href="/standing" class="text-center text-uppercase font-weight-normal"><u>Add Final Standings</u><br>
+        </a>
+    </div>
+    </div>
+  </div> -->
+<div class="row">
+
+  <div class="addAll">
+    <a href="/adminGallery">Add Images</a><br />
+    <a href="/standing">Add Final Standings</a>
+    <a href="/allTeam">Registered Teams</a><br />
+  </div>
+    <div class="text-block">
+
+      <div class="text-center"><ins>
+          <h5 class="heading">
+            2018 Nava Nalanda Cup - Final Standings
+          </h5>
+        </ins>
+        <div class="row">
+          {{#each stand}}
+<div class="col-sm-6">
+        <div class="prize"><strong>
+            <div class="circlelast"></div><a>Champion :: {{this.champion}}</a>
+          </div><br>
+        <div class="prize">
+          <div class="circlelast"></div><a>Runner-up :: {{this.second}}</a> 
+        </div><br>  
+        <div class="prize">
+          <div class="circlelast"></div><a>Third Place :: {{this.third}}</a></strong>
+        </div>
+      </div>
+      <div class="col-sm-6">
+          <div class="prize"><strong>
+              <div class="circlelast"></div><a>Highest Score :: {{this.highestScore}}</a>
+            </div><br>
+          <div class="prize">
+            <div class="circlelast"></div><a>Best Player :: {{this.bestPlayer}}</a> 
+          </div><br>  
+          <div class="prize">
+            <div class="circlelast"></div><a>Best GoalKeeper :: {{this.bestGoalkeeper}}</a></strong>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+            n =  new Date();
+            y = n.getFullYear(); 
+            m = n.getMonth() + 1; 
+            d = n.getDate();
+
+        document.getElementById("demo").value= m + "/" + d + "/" + y;
+       </script>
+
+
+<script>
+        $('button.newsButton').click( function() {
+             $('form.newsForm').submit();
+         });
+         $('button.imageButton').click( function() {
+             $('form.imageForm').submit();
+         });
+     </script>
+     

@@ -1,0 +1,20 @@
+<h7>{{viewTitle}}</h7>
+
+
+
+<form action="/adminGallery" method="POST" class="imageForm" enctype="multipart/form-data" >
+    <div class="row col-md-4 offset-6">
+    <div class="schedules">
+        <input type="hidden" name="_id" value="{{image._id}}">
+        <div class="text-center text-uppercase font-weight-normal heading"><u>Add images</u><br>
+        </div>
+        
+        <div class="col-sm-4">
+            <input type="file" name="file1"/>
+           </div>
+           <div class="form-group col-sm-3 offset-7">
+              <button type="submit" id="but" class="btn btn-info imageButton"><i class="fa fa-database"></i>Submit</button>
+          </div>
+      </div>
+    </div>
+    </form>

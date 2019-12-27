@@ -1,0 +1,67 @@
+<h5 style="display: none;">{{viewTitle}}</h5>
+<div class="register register-right" style="width:1100px;">
+    <div class="row register-form">
+    <h2 class="text-danger text-uppercase">Registered Teams</h2>
+
+    <div class="container"> 
+    <div class="row">
+            <h3 class="col-md-4">
+                    Team Name
+                </h3>
+                <h3 class="col-md-4">
+                        Year
+                    </h3>
+                    <h3 class="col-md-4">
+                            Phone Number
+                        </h3>
+                    </div>
+    </div>
+                    <div class="container"> 
+            <div class="row">                     
+        <div class="col-md-2">
+                {{#each list}}
+                <div >{{this.teamName}}</div>
+        </div>
+           <div class="col-md-2">
+                <div >{{this.year}}</div>
+            </div>
+                <div >{{this.phonNo}}</div>
+                {{/each}}
+        </div>
+    </div>
+</div>
+        <!-- <div class="row">
+        <h3 class="col-md-6">
+            First Name
+        </h3>
+        <h3 class="col-md-6">
+                Second Name
+        </h3>
+    </div> -->
+<!-- <div class="container">
+<div class="row"> -->
+ 
+        <!-- <div class="col-md">
+                {{#each teamName}}
+                <div class="nameDivider">{{this}}</div>
+                {{/each}}
+        </div> -->
+        <!-- <div class="col-md">
+            {{#each firstName}}
+            <div class="nameDivider">{{this}}</div>
+            {{/each}}
+    </div>
+    <div class="col-md">
+            {{#each lastName}}
+            <div class="nameDivider">{{this}}</div>
+            {{/each}}
+    </div> -->
+    <!-- <div class="col">
+            {{#each pic}}
+            <div>{{this}}</div>
+            {{/each}}
+    </div> -->
+</div>
+</div>
+<!-- </div>
+</div> -->

@@ -1,0 +1,36 @@
+<h7>{{viewTitle}}</h7>
+  <div class="text-block">
+
+        <div class="text-center"><ins>
+            <h5 class="heading">
+              2018 Nava Nalanda Cup - Final Standings
+            </h5>
+          </ins>
+          <div class="row">
+            {{#each list}}
+  <div class="col-sm-7">
+          <div class="prize"><strong>
+              <div class="circlelast"></div><a>{{this.champion}}</a>
+            </div><br>
+          <div class="prize">
+            <div class="circlelast"></div><a>{{this.second}}</a> 
+          </div><br>  
+          <div class="prize">
+            <div class="circlelast"></div><a>{{this.third}}</a></strong>
+          </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="prize"><strong>
+                <div class="circlelast"></div><a>{{this.highestScore}}</a>
+              </div><br>
+            <div class="prize">
+              <div class="circlelast"></div><a>{{this.bestPlayer}}</a> 
+            </div><br>  
+            <div class="prize">
+              <div class="circlelast"></div><a>{{this.bestGoalkeeper}}</a></strong>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>

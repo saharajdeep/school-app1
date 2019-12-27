@@ -1,0 +1,166 @@
+<h5 style="display: none;">{{viewTitle}}</h5>
+
+
+<form action="/player" method="POST" enctype="multipart/mixed"  autocomplete="off" style="background-color: beige;padding: 20px;">
+   <!-- <div class="register">   
+           <input type="hidden" name="_id" value="{{player._id}}">
+                       <div class="register-right">
+                            <h1 class="text-danger text-center text-uppercase fa fa-user fa-3x">Register Players</h1>
+                                  
+                                   <div class="row register-form">
+                                       <div class="col-sm-4">
+                                       <div class="form-group">
+                                               <label for="validationDefault01"></i><h5 class="font-weight-normal"><i class="fa fa-users">Team Name</i></h5></label>
+                                                       <input type="text" class="form-control" id="validationDefault01" name="teamName" required/> 
+                                                           
+                                       </div>
+                                       </div>
+                                       <div class="col-sm-4">
+                                           <div class="form-group">
+                                               <label for="validationDefault02"><h5 class="font-weight-normal"><i class="fa fa-calendar">Year Of Passing</i></h5></label>
+                                                       <select id="yop" class="form-control" id="validationDefault02" name="year" required></select>
+                                       </div>
+                                       </div>
+                                       <div class="col-sm-4">
+                                       <div class="form-group">
+                                            <label for="validationDefault02"><h5 class="font-weight-normal"><i class="fa fa-phone"></i>Team Phone Number</h5></label>
+                                            <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                                    </div>
+                                        <input type="number" minlength="10" maxlength="11" name="phoneNo" id="validationDefault05" class="form-control" placeholder="(033-)xxxxxxx *" required/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                        </div>
+                                   
+
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <div class="input-group">
+                                   
+                                                <div class="input-group-btn">
+                                                  <button class="btn btn-success" type="button" id="addfield" onclick="add_education_fields(this.player)">+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                         
+                                          </div>
+ <div class="panel panel-default">
+    
+        <div class="panel-body" id="main_block">
+                <div class="row register-form">
+          <div class="col-sm-3">
+                
+            <div class="form-group">
+              <input type="text" class="form-control" id="Schoolname" name="firstName[]" placeholder="First name" required/>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <input type="text" class="form-control" id="Major" name="lastName[]" placeholder="Last Name" required/>
+            </div>
+          </div>
+
+        
+          <div class="col-sm-3">
+                <div class="form-group">
+                  <label  id="educationDate">
+                      Upload Adhar Card and Admit card/Madhyamik/HS result/Pass certificate
+                        <input type="file" id="Degree" name="pic[]" accept="image/*" required>
+                  </label>
+                </div>
+              </div>
+            
+       
+     
+     
+          <div class="clear"></div>
+          <div id="education_fields"></div>
+
+     <div class="form-group">
+                <button type="submit" id="submitTeamList" class="btn btn-info" disabled><i class="fa fa-database"></i>Submit</button> 
+                <p>Mininmum 10 players and maximum 25 players can be submitted</p>     
+    </div>
+            </div>
+          </div>
+          </div>
+          </div>
+   </div> -->
+
+   <h1>Registration</h1>
+   <div class="row row11" >
+      <div class="col-sm-4">
+          <div class="form-group">
+                  <label for="validationDefault01"></i><h5 class="font-weight-normal"><i class="fa fa-users">Team Name</i></h5></label>
+                          <input type="text" class="form-control" id="validationDefault01" name="teamName" required/> 
+                              
+          </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="form-group">
+                  <label for="validationDefault02"><h5 class="font-weight-normal"><i class="fa fa-calendar">Year Of Passing</i></h5></label>
+                          <select id="yop" class="form-control" id="validationDefault02" name="year" required></select>
+          </div>
+          </div>
+          <div class="col-sm-4">
+          <div class="form-group">
+               <label for="validationDefault02"><h5 class="font-weight-normal"><i class="fa fa-phone"></i>Team Phone Number</h5></label>
+               <div class="input-group">
+                       <div class="input-group-prepend">
+                         <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                       </div>
+           <input type="number" minlength="10" maxlength="11" name="phoneNo" id="validationDefault05" class="form-control" placeholder="(033-)xxxxxxx *" required/>
+           </div>
+       </div>
+       </div>
+      </div>
+   <div class="row row21 " id="main_block">
+       <legend>Personal Details
+       </legend>
+       <div class="col-sm-3">
+                
+          <div class="form-group">
+            <input type="text" class="form-control" id="Schoolname" name="firstName[]" placeholder="First name" required/>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <input type="text" class="form-control" id="Major" name="lastName[]" placeholder="Last Name" required/>
+          </div>
+        </div>
+
+      
+        <div class="col-sm-3">
+              <div class="form-group">
+                <label  id="educationDate">
+                    Upload Adhar Card and Admit card/Madhyamik/HS result/Pass certificate
+                      <input type="file" id="Degree" name="pic[]" accept="image/*" required>
+                </label>
+              </div>
+            </div>
+               
+        <div class="col-sm-3">
+            <div class="input-group-btn">
+                <button class="btn btn-success" type="button" id="addfield" onclick="add_education_fields(this.player)">+<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
+              </div>    
+          </div>
+         
+          <div class="clear"></div>
+          <div id="education_fields"></div>
+
+            </div>
+   <fieldset class="row31">
+     
+       <div class="infobox"><h4>Helpful Information</h4>
+           <p>Minimum 10 and maximum 25 players can be added</p>
+       </div>
+       <div><button id="submitTeamList" class="btn btn-info" disabled><i class="fa fa-database"></i>Register »</button></div>
+   </fieldset>
+   
+               </form>
+            
+<script src="..\assets\customJs\count.js"></script>
+
+

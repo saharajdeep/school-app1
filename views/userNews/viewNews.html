@@ -1,0 +1,37 @@
+<h5>{{viewTitle}}</h5>
+<div class="container-tab container text-blue">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="news-slider" class="owl-carousel">
+                        {{#each list}}
+
+                        <div class="post-slide">
+                            <div class="post-img userNews">
+                                <!-- <a href="#"> -->
+                                        <img src="{{this.file}}" class="responsive-img imgUploads"/>
+                              
+                                <!-- </a> -->
+                            </div>
+                                <div class="post-review userNews">
+                                        <!-- <h3 class="post-title"><a href="completeNews.html" class="text-white">Latest News Post</a></h3> -->
+                                        <p class="post-date">{{this.date}}</p>
+                                        <p class="post-description">{{this.description}}</p>
+                                </div>
+                        </div>
+
+                         <!-- <img src="{{this}}" class="responsive-img"/> -->
+                         {{/each}}                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+                n =  new Date();
+                y = n.getFullYear(); 
+                m = n.getMonth() + 1; 
+                d = n.getDate();
+
+            document.getElementById("demo").innerHTML = m + "/" + d + "/" + y;
+           </script>
+    <!-- <script src="..\customJs\imgAdd.js"></script> -->
+

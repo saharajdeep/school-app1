@@ -1,0 +1,328 @@
+<html>
+  <!-- css imports -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="..\lib\css\bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="..\customCss\registration.css" rel="stylesheet" type="text/css">
+<link href="..\customCss\style.css" rel="stylesheet" type="text/css">
+<link href="..\customCss\custom.flexslider.css" rel="stylesheet" type="text/css">
+<link href="..\customCss\font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="..\customCss\framework.css" rel="stylesheet" type="text/css">
+<link href="..\customCss\layout.css" rel="stylesheet" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="..\customCss\news.css">
+<link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico"> 
+<link href="lib\css\bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link href="..\customCss\viewImg.css" rel="stylesheet">
+<!-- Js imports -->
+
+  <!--  <script defer src="..\customJs\js\fileUpload.js"></script> -->
+<body id="top">
+  
+    <div class="wrapper row1">
+
+
+        <header id="header" class="hoc clear"> 
+          <!-- ################################################################################################ -->
+          <nav id="mainav">
+            <ul class="clear">
+                <li class="fl_left"><img src="..\pic\Logo.png" style="margin:10%;"></img></li>
+              <div class="fl_right menuList">
+             
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="/userTeams">View Teams</a></li>
+              <li><a href="/userNews">News</a></li>
+              <li><a href="/player">Register Players</a></li>
+              <li><a href="/userGallery">Gallery</a></li>
+              <li><a class="drop dropbtn" href="#">Account</a>
+                <ul>
+                    <a style="color:whitesmoke" href="/users/login"><i class="fas fa-user-alt"></i>Log in</a>
+                    <a style="color:whitesmoke" href="/users/login">logout</a>
+                </ul>
+              </li>
+            </div>
+            </ul>
+          </nav>
+          <!-- ################################################################################################ -->
+        </header>
+      </div>
+
+      <div class="bg bgded overlay">
+        <div id="pageintro" class="hoc clear"> 
+          
+          <!-- ################################################################################################ -->
+          <div class="flexslider basicslider">
+            <ul class="slides">
+              <li>
+                <article>
+                  <p>Proud</p>
+                  <h3 class="heading">Eleifend tristique lacus</h3>
+                  <p>Eleifend sagittis cras convallis nisl eget</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>For More Updates</p>
+                  <footer><a class="btn inverse" href="https://twitter.com/nnalumni/media">Follow us on twitter</a></footer>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Sagittis</p>
+                  <h3 class="heading">Feugiat blandit erat</h3>
+                  <p>Convallis nibh nulla nec dictum mi consequat vel</p>
+                  <footer><a class="btn" href="#">Facilisis vestibulum</a></footer>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <!-- ################################################################################################ -->
+        </div>
+      </div>
+  <!-- <div class="row">
+      <img class="img-fluid logo" src="..\pic\Logo.png"></img>
+  </div> -->
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark bar-height">
+<div class="row">
+    <div class="navbar-nav">
+ 
+      <img class="img-fluid logo" src="..\pic\Logo.png"></img>
+
+      <div class="nav-item active">
+
+        <a class="nav-link" href="#">
+
+          <div class="mx-auto menu-bar">
+
+            <div class="col-md-2">
+
+              Home
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </div>
+      <div class="col-md-2 menu-bar">
+            <div class="dropdown">
+                <div class="dropbtn">Gallery
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                  <a href="/userGallery">View</a>    
+                </div>
+              </div> 
+           
+      </div>
+      <div class="col-md-2 menu-bar">
+            <div class="dropdown">
+                <div class="dropbtn">Teams
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                  <a href="/userTeams">View Teams</a>
+               
+                </div>
+              </div> 
+           
+      </div>
+
+      <div class="col-md-2 menu-bar">
+            <div class="dropdown">
+                <div class="dropbtn">News
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                  <a href="/userNews">View News</a>    
+                </div>
+              
+            </div>
+      </div>
+      {{#if user}}
+       <div class="col-md-2 menu-bar">
+            <div class="dropdown">
+                <div class="dropbtn">
+                  Register
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                  <div class="dropdown-content">
+                      <a href="/player">Register Players</a>    
+                    </div>
+              
+              </div> 
+           
+      </div> 
+ 
+      <div class="col-md-2">
+          <div class="dropdown menu-bar">
+              <a class="dropbtn" href="/users/login">Log in
+                <i class="fa fa-caret-down"></i> 
+              </a> 
+               <div class="dropdown-content">
+                <a href="editProfile.html">Edit profile</a>
+                <a href="changeSettings.html">change settings</a>
+                <a href="#">logout</a>
+              </div> 
+           </div>      
+           </div>
+     {{else}}
+     <div class="col-md-4 menu-bar">
+        <div class="dropdown">
+            <div class="dropbtn">
+              Register
+              <i class="fa fa-caret-down"></i>
+            </div>
+              <div class="dropdown-content">
+                  <a href="/player">Register Players</a>    
+                </div>
+          
+          </div> 
+       
+  </div>
+
+      <div class="col-md-2 menu-bar">
+      <div class="dropdown">
+          <a class="dropbtn" style="color:whitesmoke">Account
+            <i class="fa fa-caret-down"></i>
+          </a> 
+          <div class="dropdown-content">
+            <a href="/users/login"><i class="fas fa-user-alt"></i>Log in</a>
+            <a href="/users/login">logout</a>
+          </div>
+       </div>      
+       </div>
+            {{/if}}
+     
+               
+    </div>
+  </div>
+  </nav> -->
+
+  <div class="row">
+    <div class="col-md-6 offset-2">
+      {{#if success_msg}}
+      <div class="alert alert-success">
+        {{success_msg}}
+      </div>
+      {{/if}}
+
+      {{#if error_msg}}
+      <div class="alert alert-danger">
+          {{error_msg}}
+        </div>
+      {{/if}}
+
+
+      {{#if error}}
+      <div class="alert alert-danger">
+          {{error}}
+        </div>
+      {{/if}}
+
+    </div>
+  </div>
+
+  <div class="wrapper row3">
+      <main class="hoc container clear"> 
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div style="background: none;">
+            {{{body}}}
+
+        </div>
+       <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+      </main>
+    </div>
+
+
+  <!-- <div class="col-md-6 offset-6 schedules">
+
+    <div class="text-center text-uppercase font-weight-normal heading"><u>Stage Schedules</u><br>
+    </div>
+    {{#each  matchList}}
+      <div class="list text-center">{{this.matchDay}}</div>
+      <div class="text-center">29<sup>th</sup>Aug 2019</div>
+      {{/each}}
+  </div> -->
+
+
+  <!-- <div class="text-block">
+
+    <div class="text-center"><ins>
+        <h5 class="heading">
+          2018 Nava Nalanda Cup - Final Standings
+        </h5>
+      </ins>
+      <div class="row">
+        {{#each stand}}
+<div class="col-sm-6">
+      <div class="prize"><strong>
+          <div class="circlelast"></div><a>Champion :: {{this.champion}}</a>
+        </div><br>
+      <div class="prize">
+        <div class="circlelast"></div><a>Runner-up :: {{this.second}}</a> 
+      </div><br>  
+      <div class="prize">
+        <div class="circlelast"></div><a>Third Place :: {{this.third}}</a></strong>
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="prize"><strong>
+            <div class="circlelast"></div><a>Highest Score :: {{this.highestScore}}</a>
+          </div><br>
+        <div class="prize">
+          <div class="circlelast"></div><a>Best Player :: {{this.bestPlayer}}</a> 
+        </div><br>  
+        <div class="prize">
+          <div class="circlelast"></div><a>Best GoalKeeper :: {{this.bestGoalkeeper}}</a></strong>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div> -->
+
+
+  
+
+
+
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+        <!-- Js imports -->
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+    <script src="..\customJs\formFields.js"></script>
+     <script src="..\customJs\batch.js"></script>
+     <script src="..\customJs\newsSlide.js"></script>
+     <script src="..\customJs\viewImg.js"></script>
+     <script src="..\customJs\jquery.backtotop.js"></script>
+     <script src="..\customJs\jquery.flexslider-min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    </body>
+</html>

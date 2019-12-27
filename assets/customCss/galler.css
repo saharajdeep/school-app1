@@ -1,0 +1,154 @@
+body{
+    background-image:url("../pic/Soccer_picture.jpg");
+    background-size: cover;
+    
+}
+
+.logo{
+  z-index: 2;
+}
+
+  /* For split section */
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    padding-top: 20px;
+    color: white;
+    margin-top: 3%;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #16131a4b;
+    opacity: 0.8;
+    
+  }
+  
+  .right {
+    right: 0;
+    background-color: #030008b4;
+    opacity: 0.8;
+  }
+  
+  .centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+  }
+  
+  a.topnav-icons.fa-menu {
+    display: none;
+  }
+  
+  .myLink {
+    text-decoration:none;
+    color:white !important;
+    opacity:0.8;
+  }
+  .myLink:hover {
+    opacity: 1 
+  }
+  
+  .myLink:hover h1 {
+    font-size: 41px;
+  }
+  
+  .mySpan {
+     border-radius: 15%;
+     border: 2px solid white;
+     padding: 20px 35px;
+     display: inline-block;
+     font-size: 105px;
+  }
+  
+  .myh1 {
+     line-height: 50px;
+     font-size: 40px;
+     margin-left:20%;
+     margin-top: 10px;
+  }
+  .myP {
+     font-size: 15px;
+     max-width: 370px;
+     padding-left: 20px;
+     padding-right: 20px;
+     margin: auto;
+  }
+  
+  @media only screen and (max-width:993px) {
+    .centered {
+      margin-top: 40px;
+    }
+    .myLink .mySpan {
+      font-size: 70px;
+      padding: 10px 25px;
+    }
+    .myLink .myh1 {
+      font-size: 25px;
+    }
+    .myLink:hover h1 {
+      font-size: 26px;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .centered {
+      margin-top: 50px;
+    }
+    .myLink .mySpan {
+      font-size: 40px;
+      padding: 10px 25px;
+    }
+    .myLink .myh1 {
+      font-size: 16px;
+    }
+    .myP {
+      display: none;
+    }
+    .myLink:hover h1 {
+      font-size: 17px;
+    }
+  }
+  
+  @media only screen and (max-height: 620px) {
+    .centered {
+      margin-top: 45px;
+    }
+    .myLink .mySpan {
+      font-size: 25px;
+      padding: 10px 25px;
+    }
+    .myLink .myh1 {
+      font-size: 16px;
+    }
+    .myP {
+      display: none
+    }
+    .myLink:hover h1 {
+      font-size: 17px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .centered {
+      margin-top: 40px;
+    }
+    .myLink .mySpan {
+      font-size: 25px;
+      padding: 10px 25px;
+    }
+    .myLink .myh1 {
+      font-size: 16px;
+    }
+    .myP {
+      display: none
+    }
+    .myLink:hover h1 {
+      font-size: 17px;
+    }
+  }

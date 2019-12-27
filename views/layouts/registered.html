@@ -1,0 +1,758 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+< css imports >
+<link rel="stylesheet" href="lib\css\bootstrap.min.css">
+<link href="customCss\registration.css" rel="stylesheet" type="text/css">
+<link href="customCss\style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+     
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark bar-height">
+                <div class="row">
+                    <div class="navbar-nav">
+                 
+                      <img class="img-fluid logo" src="pic/Logo.png"></img>
+                
+                      <div class="nav-item active">
+                
+                        <a class="nav-link" href="#">
+                
+                          <div class="mx-auto menu-bar">
+                
+                            <div class="col-md-2 bar-active">
+                
+                              Home
+                
+                            </div>
+                
+                          </div>
+                
+                        </a>
+                
+                      </div>
+                      <div class="col-md-2 menu-head">
+                            <div class="dropdown">
+                                <div class="dropbtn bar-active">Gallery
+                                  <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                  <a href="view.html">View</a>    
+                                </div>
+                              </div> 
+                           
+                      </div>
+                      <div class="col-md-2 menu-head">
+                            <div class="dropdown">
+                                <div class="dropbtn bar-active">Teams
+                                  <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                  <a href="teamList.html">View Teams</a>
+                               
+                                </div>
+                              </div> 
+                           
+                      </div>
+                
+                      <div class="col-md-2 menu-head">
+                            <div class="dropdown">
+                                <div class="dropbtn bar-active">News
+                                  <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                  <a href="news.html">View News</a>    
+                                </div>
+                              
+                            </div>
+                      </div>
+                
+                      <div class="col-md-2 menu-head">
+                            <div class="dropdown">
+                                <div class="dropbtn">
+                                  Register
+                                  <i class="fa fa-caret-down"></i>
+                                </div>
+                                  <div class="dropdown-content">
+                                      <a href="registered.html" target="_self">Register Players</a>    
+                                    </div>
+                              
+                              </div> 
+                           
+                      </div>
+                 
+                 
+                      <div class="col-md-6">
+                      <div class="dropdown menu-user">
+                          <div class="dropbtn">User 
+                            <i class="fa fa-caret-down"></i>
+                          </div>
+                          <div class="dropdown-content">
+                            <a href="editProfile.html">Edit profile</a>
+                            <a href="changeSettings.html">change settings</a>
+                            <a href="#">logout</a>
+                          </div>
+                        </div> 
+                      
+                </div>
+                    </div>
+                  </div>
+                  </nav> -->
+        
+                 <form action="/layouts" method="POST" autocomplete="off">
+                    <div class="register">   
+                            <input type="hidden" name="_id" value="{{player._id}}">
+                                        <div class="col-md-9 register-right">
+                                         
+                                            <div class="tab-content" id="myTabContent">
+                                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                    <div class="row register-form">
+                                                        <div class="col-md-6">
+                                                        <div class="form-group register-heading">
+                                                                <label for="validationDefault01"><h5>Team Name</h5></label>
+                                                                        <input type="text" class="form-control" id="validationDefault01" name="teamName" placeholder="" value="" required/> 
+                                                                            
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group register-heading">
+                                                                <label for="validationDefault02"><h5>Year Of Passing</h5></label>
+                                                                        <select id="year" class="form-control" id="validationDefault02" name="yearofPassing" required ></select>
+                                                        </div>
+                                                        </div>
+                                                         </div>
+                                                         <!-- <p>Insert Player details</p>
+                                                         <div class="row register-form">
+
+                                                                <div class="col-md-6">
+                                                       
+                                                                        <div class="form-group">
+                                                        
+                                                                            <input type="text" class="form-control" name="firstName" placeholder="First Name *" value="" required/>
+                                                                            
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" name="lastName" placeholder="Last Name *" value="" required>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="adhar" class="form-control" name="adharCard" placeholder="Adhar Card No *" value="" required/>
+                                                                            <input type="file"name="pic" accept="image/*" required>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="admit" class="form-control" name="admitCard" placeholder="Admit card No *" value="" required/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                                <div class="input-group">
+                                                                                        <div class="input-group-prepend">
+                                                                                          <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                                                                        </div>
+                                                                            <input type="tel" minlength="10" maxlength="11" name="phoneNo" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                                <label for="validationDefault03">Madhyamik/HS result/Pass certificate</label>
+                                                                            <input type="file" id="validationDefault03" name="certificate" accept="image/*" required>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                 <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+                                                                                     <a class="btn btn-secondary" href="/player/list"><i class="fa fa-list-alt"></i>View All</a>
+                                                                             
+                                                                             </div>                       
+                                                                </div>
+                                                            </div>
+                                                         </div> -->
+                                     Players Details
+                                     <div id="accordion">
+                                         <h3>Player 1</h3>
+                                        <div class="row register-form">
+                                            <div class="col-sm-4 btn-sm edit-top">
+                                                <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                    
+                                                <div class="form-group">
+                                
+                                                    <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                                                    
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                                                    <input type="file"name="pic" accept="image/*" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                                                </div>
+                                                    <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="validationDefault03">Madhyamik/HS result/Pass certificate</label>
+                                                    <input type="file" id="validationDefault03" name="pic" accept="image/*" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="submit" class="btn btn-primary" value="Submit"> 
+                                                    </div>                        
+                                        </div>
+                                    </div>
+                                         <h3>Player 2</h3>
+                                        <div class="row register-form">
+                                                <div class="col-sm-4 btn-sm edit-top">
+                                                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                        
+                                                    <div class="form-group">
+                                    
+                                                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                                                        
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                                                        <input type="file"name="pic" accept="image/*" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                            <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                                                    </div>
+                                                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="validationDefault04">Madhyamik/HS result/Pass certificate</label>
+                                                        <input type="file" id="validationDefault04" name="pic" accept="image/*" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                                                        </div>                        
+                                            </div>
+                                        </div>
+          <h3>Player 3</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault05">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault05" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+        <h5>Player 4</h5>
+         <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault06">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault06" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 5</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault07">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault07" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 6</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault08">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault08" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 7</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault09">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault09" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 8</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault10">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault10" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 9</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault11">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault11" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 10</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault12">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault12" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 11</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault13">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault13" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 12</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault14">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault14" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 13</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault15">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault15" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+          <h3>Player 14</h3>
+          <div class="row register-form">
+                <div class="col-sm-4 btn-sm edit-top">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Edit</button>
+                </div>
+                <div class="col-md-6">
+                        
+                    <div class="form-group">
+    
+                        <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="adhar" class="form-control" placeholder="Adhar Card No *" value="" required/>
+                        <input type="file"name="pic" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="admit" class="form-control" placeholder="Admit card No *" value="" required/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                    </div>
+                        <input type="tel" minlength="10" maxlength="11" name="txtEmpPhone" id="validationDefault05" class="form-control" placeholder="Player Phone *" value="" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="validationDefault16">Madhyamik/HS result/Pass certificate</label>
+                        <input type="file" id="validationDefault16" name="pic" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit"> 
+                        </div>                        
+            </div>
+        </div>
+        </div>
+        <h5>Pay</h5>
+        <img src="pic\payment.png" class="pay">
+                                      </div>
+            </form>
+        
+      <script src="customJs\playersAccrodion.js"></script>
+        <script src="customJs\regEdit.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="customJs\batch.js"></script>
+        </body>
+        </html>

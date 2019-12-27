@@ -1,0 +1,45 @@
+{{viewTitle}}
+
+<div class="register register-right" style="width:1100px;">
+    <div class="row register-form">
+<!-- <h3><a class="btn btn-secondary" href="/player"><i class="fa fa-plus"></i>Create New</a>
+</h3> -->
+    <h2 class="text-danger text-uppercase">Team List</h2>
+   
+   <!--<table class="table table-striped">
+        <thead>
+         <tr>
+   <th>Team Name</th>
+   <th>Year Of Passing</th>
+   <th>Team Phone Number</th>
+   <tbody>
+  
+   <tr>
+   <td value="">{{this.teamName}}</td> 
+   <td>{{this.year}}</td>
+   <td>{{this.phoneNo}}</td> 
+</tr> 
+   
+</tbody>
+</tr> 
+</table>-->
+<table class="table table-striped">
+<thead>
+<tr>
+        <th>Team Name</th>
+        <th>Year Of Passing</th>
+        <th>Team Phone Number</th>
+</tr>
+</thead>
+   <tbody>
+       {{#each list}}
+       <tr>           
+           <td>{{this.teamName}}</td>
+           <td>{{this.year}}</td>
+           <td>{{this.phoneNo}}</td>
+       </tr>
+       {{/each}}
+   </tbody>
+</table>
+</div>
+</div>

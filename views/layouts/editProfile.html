@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="lib\css\bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="customCss\edit.css" rel="stylesheet" type="text/css">
+<link href="customCss\style.css" rel="stylesheet" type="text/css">
+<link href="customCss\payment.css" rel="stylesheet" type="text/css">
+<script src="lib\js\jquery.min.js"></script>
+<script src="lib\js\bootstrap.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+     
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark bar-height">
+        <div class="row">
+            <div class="navbar-nav">
+         
+              <img class="img-fluid logo" src="pic/Logo.png"></img>
+        
+              <div class="nav-item active">
+        
+                <a class="nav-link" href="#">
+        
+                  <div class="mx-auto menu-bar">
+        
+                    <div class="col-md-2 bar-active menu-head">
+        
+                      Home
+        
+                    </div>
+        
+                  </div>
+        
+                </a>
+        
+              </div>
+              <div class="col-md-2 menu-head">
+                    <div class="dropdown">
+                        <div class="dropbtn bar-active">Gallery
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                          <a href="view.html">View</a>    
+                        </div>
+                      </div> 
+                   
+              </div>
+              <div class="col-md-2 menu-head">
+                    <div class="dropdown">
+                        <div class="dropbtn bar-active">Teams
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                          <a href="teamList.html">View Teams</a>
+                       
+                        </div>
+                      </div> 
+                   
+              </div>
+        
+              <div class="col-md-2 menu-head">
+                    <div class="dropdown">
+                        <div class="dropbtn bar-active">News
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                          <a href="news.html">View News</a>    
+                        </div>
+                      
+                    </div>
+              </div>
+        
+              <div class="col-md-2 menu-head">
+                    <div class="dropdown">
+                        <div class="dropbtn bar-active">
+                          Register
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                          <div class="dropdown-content">
+                              <a href="registered.html" target="_self">Register Players</a>    
+                            </div>
+                      
+                      </div> 
+                   
+              </div>
+         
+         
+              <div class="col-md-6">
+              <div class="dropdown menu-user">
+                  <div class="dropbtn">User 
+                    <i class="fa fa-caret-down"></i>
+                  </div>
+                  <div class="dropdown-content">
+                    <a href="editProfile.html">Edit profile</a>
+                    <a href="changeSettings.html">change settings</a>
+                    <a href="#">logout</a>
+                  </div>
+                </div> 
+              
+        </div>
+            </div>
+          </div>
+          </nav>
+
+    
+<div class="container">
+	<div class="row">
+		<div class="full-width">
+
+        <!--================== Snippet for custom input type file on button ================-->
+
+        <!--=========================input type file change on button ends here====================-->
+
+
+        <div class="full-width">
+           
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="custom-form">
+                <div class="text-center bg-form">
+                    <div class="img-section">
+                        <img src="http://lorempixel.com/200/200/nature/" class="imgCircle" alt="Profile picture">
+                        <span class="fake-icon-edit" id="PicUpload" style="color: #ffffff;"><span class="glyphicon glyphicon-camera camera"></span></span>
+                    <div class="col-lg-12">
+                        <h4 class="text-right col-lg-12"><span class="glyphicon glyphicon-edit"></span> Edit Profile</h4>
+                        <input type="checkbox" class="form-control" id="checker">
+                    </div>
+                    </div>
+                    <input type="file" id="image-input" onchange="readURL(this);" accept="image/*" class="form-control form-input Profile-input-file" >
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <input type="text" class="form-control form-input" value="" placeholder="Name" id="name">
+                    <span class="glyphicon glyphicon-user input-place"></span>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <input type="text" class="form-control form-input" value="" placeholder="Email ID" id="email">
+                    <span class="glyphicon glyphicon-envelope input-place"></span>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <input type="text" class="form-control form-input" value="" placeholder="Phone Number" id="phone">
+                    <span class="glyphicon glyphicon-earphone input-place"></span>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <input type="text" class="form-control form-input" value="" placeholder="Address" id="place">
+                    <span class="glyphicon glyphicon-map-marker input-place"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 text-center">
+                    <button class="btn btn-info btn-lg custom-btn" id="submit" ><span class="glyphicon glyphicon-save"></span> Save</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+        
+	</div>
+</div>
+
+
+<!--==================================== sorry I am a newbie in bootsnipp so I am unable to link js to html in bootsnipp thats why I have included the script in html ===================-->
+
+<script>
+
+    $('input[id=base-input]').change(function() {
+        $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
+    });
+
+    <!--==================Javascript code for custom input type file on button ================-->
+
+    $('input[id=main-input]').change(function() {
+        console.log($(this).val());
+        var mainValue = $(this).val();
+        if(mainValue == ""){
+            document.getElementById("fake-btn").innerHTML = "Choose File";
+        }else{
+            document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
+        }
+    });
+
+    <!--=========================input type file change on button ends here====================-->
+
+//    ===================== snippet for profile picture change ============================ //
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.imgCircle')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+//    =================================== ends here ============================================ //
+
+    var checkme = document.getElementById('checker');
+    var userImage = document.getElementById('image-input');
+    var userName = document.getElementById('name');
+    var userPhone = document.getElementById('phone');
+    var userEmail = document.getElementById('email');
+    var userPlace = document.getElementById('place');
+    var UserSend = document.getElementById('submit');
+    var editPic = document.getElementById('PicUpload');
+    checkme.onchange = function() {
+        UserSend.disabled = !this.checked;
+        userImage.disabled = !this.checked;
+        userName.disabled = !this.checked;
+        userPhone.disabled = !this.checked;
+        userEmail.disabled = !this.checked;
+        userPlace.disabled = !this.checked;
+        editPic.style.display = this.checked ? 'block' : 'none';
+    };
+    </script>

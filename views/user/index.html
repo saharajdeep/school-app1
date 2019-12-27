@@ -1,0 +1,73 @@
+<h7>{{viewTitle}}</h7>
+
+<!-- <div class="row">
+  <div class="dt text-center"> <strong>2019</strong></div>
+  <div class="schedules">
+
+      <div class="text-center text-uppercase font-weight-normal heading"><u>Stage Schedules</u><br>
+      </div>
+      {{#each stand}}
+        <div class="list text-center">{{this.matchDay}}</div>
+        <div class="text-center">29<sup>th</sup>Aug 2019</div>
+        {{/each}}
+        <div class="list text-center">Team A V Team B</div>
+        <div class="text-center">1<sup>st</sup> Sep 2019</div> 
+    </div>
+  </div> -->
+  <div class="container-fluid">
+      <div class="text-intro">
+    <div class="text-center">
+
+      <p class="font-weight-bolder"><strong>Nava Nalanda Cup</strong><br>
+
+        <div class="text-dark">Register your teams for the<br>
+
+          ultimate tournament of the year!</div>
+
+      </p>
+    </div>
+     </div>
+  </div>
+
+  <!-- <img class="img-fluid img" src="pic/Soccer_picture.jpg"> -->
+  <div class="contain">
+
+      <div class="text-block">
+
+          <div class="text-center"><ins>
+              <h5 class="heading">
+                2018 Nava Nalanda Cup - Final Standings
+              </h5>
+            </ins>
+            <div class="row">
+              {{#each stand}}
+    <div class="col-sm-6">
+            <div class="prize"><strong>
+                <div class="circlelast"></div><a>Champion :: {{this.champion}}</a>
+              </div><br>
+            <div class="prize">
+              <div class="circlelast"></div><a>Runner-up :: {{this.second}}</a> 
+            </div><br>  
+            <div class="prize">
+              <div class="circlelast"></div><a>Third Place :: {{this.third}}</a></strong>
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="prize"><strong>
+                  <div class="circlelast"></div><a>Highest Score :: {{this.highestScore}}</a>
+                </div><br>
+              <div class="prize">
+                <div class="circlelast"></div><a>Best Player :: {{this.bestPlayer}}</a> 
+              </div><br>  
+              <div class="prize">
+                <div class="circlelast"></div><a>Best GoalKeeper :: {{this.bestGoalkeeper}}</a></strong>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

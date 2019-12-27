@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+.bar-tabs{
+  margin-top: 6.5%;
+  color: rgb(34, 31, 31)
+}
+.news-tab{
+  margin-top: 6.5%;
+  color: cornsilk;
+}
+/* Importing from style.css */
+
+.bar-height{
+  height:60px;
+}
+
+.userNews{
+  margin-left: 50px;
+}
+.menu-bar{
+padding: 40px;
+margin-top:20px;
+}
+
+.show {display: block;}
+
+img {
+  display: block;
+}
+
+.imgUploads{
+  max-width:80%; 
+  height:40%; 
+}

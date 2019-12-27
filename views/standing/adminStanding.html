@@ -1,0 +1,39 @@
+<h7>{{viewTitle}}</h7>
+
+<form action="/standing" method="POST">
+    <div class="col-md-8 standing">   
+  <div class="text-block">
+
+      <div class="text-center"><ins>
+          <h5 class="heading">
+           Enter previous Standings
+          </h5>
+        </ins>
+
+        <div class="prize"><strong>
+            <div class="circlelast"></div><input type="text" name="champion" placeholder="champion" required/>
+          </div><br>
+        <div class="prize">
+          <div class="circlelast"></div><input type="text" name="second" placeholder="Runner-up" required/> 
+        </div><br>  
+        <div class="prize">
+          <div class="circlelast"></div><input type="text" name="third" placeholder="Third place" required/></strong>
+        </div><br>
+        <div class="prize">
+            <div class="circlelast"></div><input type="text" name="highestScore" placeholder="Highest Score" required/></strong>
+          </div><br>
+          <div class="prize">
+              <div class="circlelast"></div><input type="text" name="bestPlayer" placeholder="Best Player" required/></strong>
+            </div><br>
+            <div class="prize">
+                <div class="circlelast"></div><input type="text" name="bestGoalkeeper" placeholder="Best GoalKeeper" required/></strong>
+              </div>          
+      </div><br>
+      <div class="form-group col-sm-6 offset-6">
+          <button type="submit" id="but" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+              <!-- <a class="btn btn-secondary" href="/player/list"><i class="fa fa-list-alt"></i>View All</a> -->
+      
+      </div>
+    </div>
+    </div>
+  </form>  

@@ -1,0 +1,45 @@
+<h5>{{viewTitle}}</h5>
+
+
+<form action="/admin" id="uploadForm" method="POST" enctype="application/x-www-form-urlencoded" autocomplete="off">
+   <div class="register">   
+           <input type="hidden" name="_id" value="{{player._id}}">
+                       <div class="col-md-9 register-right">
+                            <h1 class="text-danger text-center text-uppercase">Register Players</h1>
+                           <div class="tab-content" id="myTabContent">
+                               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                   <div class="row register-form">
+                                       <div class="col-sm-4">
+                                       <div class="form-group">
+                                               <label for="validationDefault01"><h5 class="font-weight-normal">Team Name</h5></label>
+                                                       <input type="text" class="form-control" id="validationDefault01" name="teamName" value="{{player.teamName}}"/> 
+                                                           
+                                       </div>
+                                       </div>
+                                       <div class="col-sm-4">
+                                           <div class="form-group">
+                                               <label for="validationDefault02"><h5 class="font-weight-normal">Year Of Passing</h5></label>
+                                                       <select id="yop" class="form-control" id="validationDefault02" name="year" value="{{player.year}}" ></select>
+                                       </div>
+                                       </div>
+                                       <div class="col-sm-4">
+                                       <div class="form-group">
+                                            <label for="validationDefault02"><h5 class="font-weight-normal">Team Phone Number</h5></label>
+                                            <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+                                                    </div>
+                                        <input type="number" minlength="10" maxlength="11" name="phoneNo" id="validationDefault05" class="form-control" placeholder="(033-)xxxxxxx *" value="{{player.phoneNo}}" required/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                        </div>
+      </div>
+</div>
+     <div class="form-group">
+                <button type="submit" id="but" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+                    <!-- <a class="btn btn-secondary" href="/player/list"><i class="fa fa-list-alt"></i>View All</a> -->
+            
+            </div>
+</div>
+   </div>
